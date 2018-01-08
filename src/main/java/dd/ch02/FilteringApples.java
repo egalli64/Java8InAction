@@ -5,29 +5,6 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-class Apple {
-    private final String color;
-    private final int weight;
-
-    Apple(String color, int weight) {
-        this.color = color;
-        this.weight = weight;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    @Override
-    public String toString() {
-        return "[" + color + ", " + weight + "]";
-    }
-}
-
 public class FilteringApples {
     // 2.1.1 - classic filtering
     static List<Apple> filterGreenApples(List<Apple> apples) {
