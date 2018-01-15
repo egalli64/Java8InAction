@@ -1,7 +1,5 @@
 package lambdasinaction.chap5;
 
-import lambdasinaction.chap5.*;
-
 import java.util.*;
 
 import static java.util.Comparator.comparing;
