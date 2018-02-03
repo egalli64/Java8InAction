@@ -52,7 +52,9 @@ public class PartitionPrimeNumbers {
 
         @Override
         public Supplier<Map<Boolean, List<Integer>>> supplier() {
-            return () -> new HashMap<Boolean, List<Integer>>() {{
+            return () -> new HashMap<Boolean, List<Integer>>() {
+                private static final long serialVersionUID = 1L;
+            {
                 put(true, new ArrayList<Integer>());
                 put(false, new ArrayList<Integer>());
             }};
@@ -90,7 +92,9 @@ public class PartitionPrimeNumbers {
     public Map<Boolean, List<Integer>> partitionPrimesWithInlineCollector(int n) {
         return Stream.iterate(2, i -> i + 1).limit(n)
                 .collect(
-                        () -> new HashMap<Boolean, List<Integer>>() {{
+                        () -> new HashMap<Boolean, List<Integer>>() {
+                            private static final long serialVersionUID = 1L;
+                        {
                             put(true, new ArrayList<Integer>());
                             put(false, new ArrayList<Integer>());
                         }},
