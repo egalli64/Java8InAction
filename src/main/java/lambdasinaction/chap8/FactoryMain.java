@@ -8,13 +8,12 @@ import java.util.function.Supplier;
 public class FactoryMain {
 
     public static void main(String[] args) {
-        Product p1 = ProductFactory.createProduct("loan");
+        ProductFactory.createProduct("loan");
 
         Supplier<Product> loanSupplier = Loan::new;
-        Product p2 = loanSupplier.get();
+        loanSupplier.get();
 
-        Product p3 = ProductFactory.createProductLambda("loan");
-
+        ProductFactory.createProductLambda("loan");
     }
 
     static private class ProductFactory {
